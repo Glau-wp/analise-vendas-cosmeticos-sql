@@ -28,5 +28,9 @@ Neste repositório, você encontrará queries SQL que resolvem:
 - `schema.sql`: Script para criação das tabelas e relacionamentos (PK/FK).
 - `queries.sql`: Consultas com as análises de negócio.
 
+## 🛠️ Decisões de Engenharia de Dados 
+
+A estruturação foi pensada para suportar consultas analíticas rápidas, garantindo que a normalização dos dados **evite redundâncias** e **inconsistências** no faturamento.
+
 ---
 *Projeto desenvolvido para portfólio de Ciência de Dados. Este cenário foi inspirado em desafios reais de organização de dados que presenciei em minha experiência anterior.*
