@@ -58,3 +58,49 @@ SELECT
 FROM vendas
 GROUP BY mes
 ORDER BY mes;
+
+-- Identifica os produtos que mais trazem dinheiro para o caixa
+SELECT 
+    p.nome_produto,
+    p.categoria,
+    SUM(iv.quantidade * iv.preco_aplicado) AS receita_total,
+    ROUND((SUM(iv.quantidade * iv.preco_aplicado) / (SELECT SUM(valor_total_venda) FROM Vendas) * 100), 2) AS percentual_do_total
+FROM Itens_Venda iv
+JOIN Produtos p ON iv.id_produto = p.id_produto
+GROUP BY p.nome_produto, p.categoria
+ORDER BY receita_total DESC;
+
+-- Clientes que retornaram à loja (compras > 1)
+SELECT 
+    c.nome_cliente,
+    COUNT(v.id_venda) AS frequencia_de_compra,
+    MAX(v.data_venda) AS data_ultima_compra
+FROM Vendas v
+JOIN Clientes c ON v.id_cliente = c.id_cliente
+GROUP BY c.id_cliente
+HAVING frequencia_de_compra > 1
+ORDER BY frequencia_de_compra DESC;
+
+-- Média de itens por pedido (profundidade de carrinho)
+SELECT 
+    v.id_venda,
+    c.nome_cliente,
+    COUNT(iv.id_produto) AS total_itens_no_pedido
+FROM Vendas v
+JOIN Itens_Venda iv ON v.id_venda = iv.id_venda
+JOIN Clientes c ON v.id_cliente = c.id_cliente
+GROUP BY v.id_venda
+ORDER BY total_itens_no_pedido DESC;
+
+-- ANALISE DE RETENÇÃO: Média de dias entre a primeira e a última compra
+-- Objetivo: Entender o ciclo de vida do cliente (Loyalty)
+SELECT 
+    c.nome_cliente,
+    MIN(v.data_venda) AS primeira_compra,
+    MAX(v.data_venda) AS ultima_compra,
+    CAST(JULIANDAY(MAX(v.data_venda)) - JULIANDAY(MIN(v.data_venda)) AS INT) AS dias_de_vida_do_cliente
+FROM Vendas v
+JOIN Clientes c ON v.id_cliente = c.id_cliente
+GROUP BY c.id_cliente
+HAVING dias_de_vida_do_cliente > 0 -- Apenas clientes que compraram em datas diferentes
+ORDER BY dias_de_vida_do_cliente DESC;
