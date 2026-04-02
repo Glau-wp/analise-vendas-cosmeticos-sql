@@ -40,12 +40,16 @@ Abaixo, apresento alguns dos resultados obtidos ao rodar as consultas no banco d
 ## 1. Faturamento por Categoria
 Identificamos qual segmento do catálogo de cosméticos traz maior receita:
 
-| Categoria  | Faturamento Total |
-| Perfumaria |     R$189,00      |
-| Skincare   |     R$175,00      |
-| Maquiagem  |     R$130,80      |
+| Categoria | Faturamento Total |
+| :--- | :--- |
+| Perfumaria | R$ 189,00 |
+| Skincare | R$ 175,00 |
+| Maquiagem | R$ 130,80 |
 
-<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/e2caba2e-b33a-4a84-beb8-e88675c7f139" />
+<p align="center">
+  <img src="<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/e2caba2e-b33a-4a84-beb8-e88675c7f139" />
+" width="500" alt="Gráfico de Faturamento">
+</p>
 
 ⭐ Insight: Apesar da Perfumaria ter o maior faturamento, o volume de vendas em **Maquiagem** é constante, sugerindo uma estratégia de cross-sell (vender um batom junto com o perfume).
 
@@ -54,12 +58,16 @@ Identificamos qual segmento do catálogo de cosméticos traz maior receita:
 Análise de quanto, em média, cada cliente gasta por região:
 
 | Estado (UF)  | Ticket Médio (R$) |
+| :--- | :--- |
 |     RJ       |     R$110,00      |
 |     SP       |     R$105,45      |
 |     PR       |     R$85,80       |
 
-<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/a7ff8dee-827a-4b06-9110-939c2189eef9" />
+<p align="center">
+  <img src="<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/a7ff8dee-827a-4b06-9110-939c2189eef9" />
 
+" width="500" alt="Gráfico de Ticket Médio">
+</p>
 
 ---
 *Projeto desenvolvido para portfólio de Ciência de Dados. Este cenário foi inspirado em desafios reais de organização de dados que presenciei em minha experiência anterior.*
