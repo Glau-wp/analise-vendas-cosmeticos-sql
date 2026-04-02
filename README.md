@@ -40,34 +40,33 @@ Abaixo, apresento alguns dos resultados obtidos ao rodar as consultas no banco d
 ## 1. Faturamento por Categoria
 Identificamos qual segmento do catálogo de cosméticos traz maior receita:
 
-| Categoria | Faturamento Total |
-| :--- | :--- |
-| Perfumaria | R$ 189,00 |
-| Skincare | R$ 175,00 |
-| Maquiagem | R$ 130,80 |
-
 <p align="center">
-  <img src="<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/e2caba2e-b33a-4a84-beb8-e88675c7f139" />
-" width="500" alt="Gráfico de Faturamento">
+  <img src="https://github.com/user-attachments/assets/e2caba2e-b33a-4a84-beb8-e88675c7f139" width="500" alt="Gráfico de Faturamento por Categoria">
+  <br>
+  <em>Gráfico 1: Visão geral de faturamento por categoria de produto.</em>
 </p>
 
 ⭐ Insight: Apesar da Perfumaria ter o maior faturamento, o volume de vendas em **Maquiagem** é constante, sugerindo uma estratégia de cross-sell (vender um batom junto com o perfume).
 
+## 2. 📍 Desempenho Regional (Ticket Médio)
+Enquanto a Perfumaria lidera o faturamento total, a análise por estado revela onde os clientes gastam mais por pedido:
 
-## 2. Ticket Médio por Estado (UF)
-Análise de quanto, em média, cada cliente gasta por região:
+| Estado (UF) | Ticket Médio (R$) | Perfil de Consumo |
+| :--- | :--- | :--- |
+| Rio de Janeiro | R$ 110,00 | Alto valor agregado | 
+| São Paulo | R$ 105,45 | Maior volume de pedidos | 
+| Paraná | R$ 85,80 | Compras de reposição|
 
-| Estado (UF)  | Ticket Médio (R$) |
-| :--- | :--- |
-|     RJ       |     R$110,00      |
-|     SP       |     R$105,45      |
-|     PR       |     R$85,80       |
+⭐ Insight: O Ticket Médio elevado no RJ sugere uma oportunidade para oferecer frete grátis em compras acima de R$ 120,00 para incentivar o aumento da cesta.
 
-<p align="center">
-  <img src="<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/a7ff8dee-827a-4b06-9110-939c2189eef9" />
+##3. 🏆 Top 3 Clientes (Fidelidade)
 
-" width="500" alt="Gráfico de Ticket Médio">
-</p>
+| Cliente | Total Gasto (R$) | N° de Compras |
+| :--- | :--- | :--- |
+| Ana Silva	| R$ 210,90	| 2 |
+| Carla Dias |	R$ 189,00	| 1 |
+| Bruno Souza |	R$ 110,00	| 1 | 
+
 
 ---
 *Projeto desenvolvido para portfólio de Ciência de Dados. Este cenário foi inspirado em desafios reais de organização de dados que presenciei em minha experiência anterior.*
