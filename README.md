@@ -58,7 +58,7 @@ Análise de quanto, em média, cada cliente gasta por região:
 |     SP       |     R$105,45      |
 |     PR       |     R$85,80       |
 
-<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/9a06b084-f4c8-4b1f-9733-98345e78e94a" />
+<img width="751" height="452" alt="image" src="https://github.com/user-attachments/assets/a7ff8dee-827a-4b06-9110-939c2189eef9" />
 
 
 ---
